@@ -6,6 +6,12 @@ const call=(req,res)=>{
 	console.log("User made a request"+req.url);
 	console.log('Port :'+port);
 	console.log('IP :'+ip);
+
+	res.writeHead(200,{'Content-Type':'text/html'});
+	res.write('Here some text');
+	res.end();
 }
+
+
 
 http.createServer(call).listen(8000);
